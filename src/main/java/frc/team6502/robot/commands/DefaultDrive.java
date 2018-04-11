@@ -1,6 +1,7 @@
 package frc.team6502.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import frc.team6502.robot.OI;
 import frc.team6502.robot.Robot;
 
 public class DefaultDrive extends Command {
@@ -10,7 +11,7 @@ public class DefaultDrive extends Command {
     }
     @Override
     protected void execute() {
-        drive(Robot.oi.getThrottle(), Robot.oi.getThrottle());
+        drive(Robot.oi.getThrottle(), OI.getThrottle());
     }
     @Override
     protected boolean isFinished() {

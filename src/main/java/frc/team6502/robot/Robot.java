@@ -1,6 +1,7 @@
 package frc.team6502.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.command.Scheduler;
 import frc.team6502.robot.subsystems.Drivetrain;
 
 public class Robot extends IterativeRobot {
@@ -32,7 +33,9 @@ public class Robot extends IterativeRobot {
     public void autonomousPeriodic() { }
 
     @Override
-    public void teleopPeriodic() { }
+    public void teleopPeriodic() {
+        Scheduler.getInstance().run();
+    }
 
     @Override
     public void testPeriodic() { }
