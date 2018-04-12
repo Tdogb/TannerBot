@@ -1,13 +1,21 @@
-package frc.team6502.robot;
+package frc.team6502.robot.subsystems;
 
-import edu.wpi.first.wpilibj.PWMSpeedController;
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.team6502.robot.Robot;
 import frc.team6502.robot.commands.DefaultDrive;
 
 public class Drivetrain extends Subsystem {
-    Spark sparkLeft = new Spark(RobotMap.leftSparkPin);
-    Spark sparkRight = new Spark(RobotMap.rightSparkpin);
+    Spark sparkLeft = new Spark(Robot.robotMap.leftSparkPin);
+    Spark sparkRight = new Spark(Robot.robotMap.rightSparkpin);
+
+    /**
+     * Default constructor
+     */
+    public Drivetrain() {
+
+    }
+
 
     @Override
     protected void initDefaultCommand() {

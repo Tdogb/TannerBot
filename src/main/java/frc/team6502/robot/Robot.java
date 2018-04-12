@@ -5,7 +5,8 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import frc.team6502.robot.subsystems.Drivetrain;
 
 public class Robot extends IterativeRobot {
-    private OI oi;
+    public static OI oi = new OI();
+    public static RobotMap robotMap = new RobotMap();
     public static Drivetrain drivetrain;
 
     @Override
@@ -25,6 +26,11 @@ public class Robot extends IterativeRobot {
 
     @Override
     public void testInit() { }
+
+    @Override
+    public void robotPeriodic() {
+        Scheduler.getInstance().run();
+    }
 
     @Override
     public void disabledPeriodic() { }
