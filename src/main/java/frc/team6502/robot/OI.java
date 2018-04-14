@@ -3,6 +3,7 @@ package frc.team6502.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.team6502.robot.commands.DefaultDrive;
+import frc.team6502.robot.commands.ZeroIMU;
 
 public class OI {
     Joystick joystick;
@@ -20,7 +21,12 @@ public class OI {
     public double getThrottle() {
         return joystick.getY();
     }
+
+    /**
+     * Turning at
+     * @return
+     */
     public double getTurning() {
-        return joystick.getX();
+        return joystick.getTwist();
     }
 }

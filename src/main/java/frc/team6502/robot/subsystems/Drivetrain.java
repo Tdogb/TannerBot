@@ -7,7 +7,9 @@ import frc.team6502.robot.commands.DefaultDrive;
 
 public class Drivetrain extends Subsystem {
     Spark sparkLeft = new Spark(Robot.robotMap.leftSparkPin);
-    Spark sparkRight = new Spark(Robot.robotMap.rightSparkpin);
+    Spark sparkLeft2 = new Spark(Robot.robotMap.left2SparkPin);
+    Spark sparkRight = new Spark(Robot.robotMap.rightSparkPin);
+    Spark sparkRight2 = new Spark(Robot.robotMap.right2SparkPin);
 
     /**
      * Default constructor
@@ -15,7 +17,6 @@ public class Drivetrain extends Subsystem {
     public Drivetrain() {
 
     }
-
 
     @Override
     protected void initDefaultCommand() {
@@ -30,7 +31,9 @@ public class Drivetrain extends Subsystem {
      */
     public void drive(double left, double right) {
         sparkLeft.set(left);
+        sparkLeft2.set(left);
         sparkRight.set(right);
+        sparkRight2.set(right);
 
     }
 }
